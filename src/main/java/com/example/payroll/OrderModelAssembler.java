@@ -27,7 +27,7 @@ class OrderModelAssembler implements RepresentationModelAssembler<Order, EntityM
           .cancel(order.getId())).withRel("cancel"));
       orderModel.add(
         linkTo(methodOn(OrderController.class)
-          .complete(order.getId())).withRel("complete"));
+          .complete( order.getId())).withRel("complete"));
     }
 
     return orderModel;

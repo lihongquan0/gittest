@@ -11,24 +11,30 @@ import javax.persistence.Table;
 @Table(name = "CUSTOMER_ORDER")
 class Order {
 
-  private @Id @GeneratedValue Long id;
+	private @Id @GeneratedValue Long id;
 
-  private String description;
-  private Status status;
+	private String description;
+	private Status status;
 
-  Order() {}
+	Order() {
+	}
 
-  Order(String description, Status status) {
+	Order(String description, Status status) {
 
-    this.description = description;
-    this.status = status;
-  }
-  
-  public void setStatus(Status status) {
-	  this.status = status;
-  }
-  
-  public Status getStatus() {
-	  return this.status;
-  }
+		this.description = description;
+		this.status = status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Status getStatus() {
+		return this.status;
+	}
+
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
 }
